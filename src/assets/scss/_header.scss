@@ -24,8 +24,8 @@
     }
     &.position-fixed {
         animation: headerAnimation .5s linear;
-        background-color: rgba($color: $bg, $alpha: .6);
-        backdrop-filter: blur(3px);
+        background-color: rgba($color: $bg, $alpha: .8);
+        backdrop-filter: blur(14px);
         --bs-navbar-padding-y: 24px;
         @include md {
             --bs-navbar-padding-y: 20px;
@@ -41,7 +41,7 @@
             left: 0;
             width: 100%;
             height: 100vh;
-            background-color: rgba($color: $white, $alpha: .90);
+            background-color: rgba($color: $bg, $alpha: .90);
             padding: 24px 16px;
             transform: translateY(100%);
             @include transition;
@@ -55,15 +55,6 @@
                 margin-bottom: 24px;
             }
         }
-        & .heading-actions {
-            @include mmd {
-                margin-top: 32px;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-            @include sm {
-                margin-top: 26px;
-            }
-        }
     }
     &-link {
         font-size: 18px;
@@ -73,6 +64,7 @@
         font-family: $font-1;
         display: block;
         padding: 10px 1rem;
+        cursor: pointer;
         @include lg {
             padding: 10px 12px;
         }
@@ -84,15 +76,6 @@
         &:hover,
         &.active {
             color: $primary;
-        }
-    }
-    &-actions {
-        grid-gap: 12px;
-        // @media (max-width: 991px) {
-        //     padding-right: 52px;
-        // }
-        @include sm {
-            grid-gap: 8px;
         }
     }
     & .btn {

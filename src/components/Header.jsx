@@ -12,20 +12,20 @@ export default function Header() {
       to: 'banner'
     },
     {
-      btn_title: 'about us',
-      to: 'about'
+      btn_title: 'About',
+      to: 'story'
     },
     {
-      btn_title: 'pricing',
-      to: 'ricing'
+      btn_title: 'Token',
+      to: 'tokenomics'
     },
     {
-      btn_title: 'blog',
-      to: 'blog'
+      btn_title: 'Roadmap',
+      to: 'roadmap'
     },
     {
-      btn_title: 'contact us',
-      to: 'contact'
+      btn_title: 'How to buy',
+      to: 'howTo'
     },
   ];
   const [isMenu, setIsMenu] = useState(false);

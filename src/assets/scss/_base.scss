@@ -66,12 +66,27 @@ input[type=number] {
     appearance: textfield;
 }
 
+:root {
+    scroll-behavior: auto !important;
+    --padding-y: 120px;
+    --padding-x: 0;
+    @include xl {
+        --padding-y: 100px;
+    }
+    @include lg {
+        --padding-y: 100px;
+    }
+    @include md {
+        --padding-y: 80px;
+    }
+    @include sm {
+        --padding-y: 60px;
+    }
+}
+
 .common {
-    &-svg {
-        display: inline-block;
-        height: 1em;
-        overflow: visible;
-        vertical-align: -0.125em;
+    &-padding {
+        padding: var(--padding-y) var(--padding-x);
     }
     &-row {
         --bs-gutter-x: 32px;
@@ -83,31 +98,8 @@ input[type=number] {
             margin-bottom: var(--bs-gutter-x);
         }
     }
-    &-padding {
-        --padding-y: 120px;
-        --padding-x: 0;
-        padding: var(--padding-y) var(--padding-x);
-        @include xl {
-            --padding-y: 100px;
-        }
-        @include lg {
-            --padding-y: 100px;
-        }
-        @include md {
-            --padding-y: 80px;
-        }
-        @include sm {
-            --padding-y: 60px;
-        }
-        &-top {
-            padding-top: var(--padding-y);
-        }
-    }
     &-title {
-        margin-bottom: 60px;
-        @media (min-width: 1440px) {
-            padding: 0 4%;
-        }
+        margin-bottom: 64px;
         @include md {
             margin-bottom: 40px;
         }
@@ -115,10 +107,10 @@ input[type=number] {
             margin-bottom: 30px;
         }
         & h2 {
-            @include font-68;
+            @include font-100;
         }
         & p {
-            @include font-20;
+            @include font-30;
         }
     }
 }
@@ -165,13 +157,14 @@ input[type=number] {
 // social 
 .social {
     &-link {
-        --width: 48px;
+        --width: 81px;
         width: var(--width);
         height: var(--width);
         background-color: $primary;
         color: $heading;
-        box-shadow: 2px 2px 0 $black;
-        @include font-24;
+        border: 2px solid $black;
+        border-radius: 100%;
+        @include font-20;
         &:hover {
             box-shadow: 0 0 0;
         }
@@ -181,6 +174,24 @@ input[type=number] {
                 width: 18px;
                 height: 18px;
             }
+        }
+    }
+}
+
+.cwc {
+    &-animation {
+        background-color: #09090A;
+    }
+    &-item {
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
     }
 }
