@@ -44,6 +44,20 @@
     align-items: center;
 }
 
+@mixin font-150 {
+    font-size: 150px;
+    line-height: 90%;
+    @include lg {
+        font-size: 120px;
+    }
+    @include md {
+        font-size: 100px;
+    }
+    @include sm {
+        font-size: 70px;
+    }
+}
+
 @mixin font-100 {
     font-size: 100px;
     line-height: 120%;

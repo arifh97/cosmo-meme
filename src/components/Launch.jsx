@@ -27,16 +27,16 @@ export default function Launch({ className }) {
 
   return (
     <div className={`launch text-center ${className}`}>
-      <h3 className='fw-semibold mb-3 mb-md-4 text-white'>Launch In</h3>
-      <div className="launch-wrap d-flex align-items-center justify-content-center gap-3 gap-md-4">
+      <h3 className='fw-semibold mb-3 mb-md-4 text-white fw-semibold'>Launch In</h3>
+      <div className="launch-wrap d-grid align-items-center gap-3 gap-md-4">
         {Object.entries(timeLeft).map(([unit,value], index) => (
           <div className="launch-item" key={index}>
-            <span className='time d-block'>{value}</span>
-            <span className="d-block">{unit}</span>
+            <span className='time d-block mb-2'>{value}</span>
+            <span className="d-block text-uppercase">{unit}</span>
           </div>
         ))}
       </div>
-      <p>Join with Telegram or Twitter now </p>
+      <p className='mb-3 mb-md-4 fw-semibold'>Join with Telegram or Twitter now </p>
       <Social />
     </div>
   )

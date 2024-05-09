@@ -76,7 +76,7 @@ export default function Header() {
             </ul>
           </nav>
           <div className="heading-actions d-flex align-items-center flex-wrap">
-            <Link to='/login' className='btn'>Join TG</Link>
+            <a href="/" target='_blank' to='' className='btn bg-primary text-black border-primary'>Join TG</a>
             <button className="heading-toggler d-lg-none" onClick={() => setIsMenu(!isMenu)}>
               <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3.08984 6H21.0898" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />

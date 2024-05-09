@@ -1,0 +1,57 @@
+.banner {
+    padding-top: 210px;
+    padding-bottom: 80px;
+    &-content {
+        & h1 {
+            @include font-150;
+            font-weight: 900;
+            background: linear-gradient(9deg, #FFF -106.79%, #C1C1C1 -28.19%, #FFF 22.99%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        & p {
+            @include font-36;
+            color: #E8E8E8;
+            padding: 0 10%;
+            margin-bottom: 55px;
+            @include xl {
+                margin-bottom: 44px;
+            }
+            @include lg {
+                margin-bottom: 40px;
+            }
+            @include md {
+                margin-bottom: 30px;
+            }
+            @include sm {
+                margin-bottom: 26px;
+            }
+        }
+    }
+    &-video {
+        width: 100%;
+        padding-bottom: 58%;
+        margin-bottom: 60px;
+        --bs-border-opacity: .5;
+        @include lg {
+            margin-bottom: 44px;
+        }
+        @include md {
+            margin-bottom: 34px;
+        }
+        @include sm {
+            margin-bottom: 24px;
+        }
+        & video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    & .launch {
+        & h3 {
+            color: #E0E0E0 !important;
+        }
+    }
+}

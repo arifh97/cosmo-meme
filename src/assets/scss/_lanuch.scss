@@ -1,0 +1,61 @@
+.launch {
+    & h3 {
+        @include font-40;
+    }
+    & p {
+        @include font-20;
+        color: #DDDDDD;
+    }
+    &-wrap {
+        padding: 10px 16px;
+        background-color: #252323;
+        border-radius: 8px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-bottom: 40px;
+        @include md {
+            margin-bottom: 30px;
+        }
+        @include sm {
+            margin-bottom: 24px;
+        }
+    }
+    &-item {
+        padding: 8px 4px;
+        background-color: $secondary;
+        color: $white;
+        border-radius: 4px;
+        & span {
+            font-size: 10px;
+            line-height: 130%;
+            &.time {
+                @include font-40;
+                line-height: 100%;
+                font-family: $font-2;
+            }
+        }
+    }
+}
+
+// social 
+.social {
+    &-link {
+        --width: 81px;
+        width: var(--width);
+        height: var(--width);
+        background-color: $primary;
+        color: $heading;
+        border: 2px solid $black;
+        border-radius: 100%;
+        @include font-20;
+        &:hover {
+            opacity: .8;
+        }
+        @include sm {
+            --width: 38px;
+            & svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+}

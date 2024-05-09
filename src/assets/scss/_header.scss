@@ -13,7 +13,7 @@
     left: 0;
     width: 100%;
     z-index: 9;
-    background-color: trans;
+    background-color: rgba($color: #030A10, $alpha: .20);
     padding: var(--bs-navbar-padding-y) 0;
     --bs-navbar-padding-y: 30px;
     @include md {
@@ -57,37 +57,24 @@
         }
     }
     &-link {
-        font-size: 18px;
+        @include font-20;
         line-height: 150%;
-        color: #74787D;
-        font-weight: 400;
+        color: #D2D2D2;
+        font-weight: 500;
         font-family: $font-1;
         display: block;
-        padding: 10px 1rem;
+        padding: 10px 22px;
         cursor: pointer;
         @include lg {
-            padding: 10px 12px;
+            padding: 10px 14x;
         }
         @include mmd {
-            font-weight: 600;
-            @include font-20;
+            font-size: 16px;
             color: $heading;
         }
         &:hover,
         &.active {
-            color: $primary;
-        }
-    }
-    & .btn {
-        --bs-btn-border-width: 1px !important;
-        --bs-btn-padding-x: 20px !important;
-        --bs-btn-padding-y: 7px !important;
-        &:not(.bg-primary) {
-            border-color: $primary !important;
-            color: $primary !important;
-            &:hover {
-                color: $white !important;
-            }
+            color: $white;
         }
     }
     &-toggler {
@@ -96,10 +83,11 @@
         padding: var(--btn-padding-y) var(--btn-padding-x);
         border: none;
         background-color: transparent;
-        color: $heading;
+        color: $white;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-left: 8px;
         & svg {
             --width: 40px;
             width: var(--width);
