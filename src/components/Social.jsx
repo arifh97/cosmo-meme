@@ -18,7 +18,7 @@ export default function Social({ className = "justify-content-center" }) {
         },
     ]
     return (
-        <div className={`social d-flex align-items-center gap-3 gap-lg-4 ${className}`}>
+        <div className={`social d-flex align-items-center gap-3 gap-lg-4 ${className}`}  data-aos="fade-up" data-aos-duration="1600" data-aos-delay="" data-aos-offset="">
             { social.map((item,index) => (
                 <a href={item.url} className='social-link d-flex align-items-center justify-content-center' key={index} dangerouslySetInnerHTML={{__html:item.icon}}></a>
             )) }

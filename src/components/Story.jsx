@@ -41,14 +41,14 @@ export default function Story() {
             {story.map((item, index) => (
               <Row key={index} className={`align-items-center mt-4 pt-md-2 ${index % 2 === 1 ? "flex-row-reverse" : ''}`}>
                 <Col xs={12} md={5} lg={4}>
-                  <div className="story-img mb-4 mb-md-0">
+                  <div className="story-img mb-4 mb-md-0" data-aos={`${index%2!=1?"fade-right":"fade-left"}`} data-aos-duration={`1${index+3}00`} data-aos-delay="" data-aos-offset="">
                     <img src={item.img} alt="" />
                   </div>
                 </Col>
                 <Col xs={12} md={7} lg={8}>
                   <div className={`story-content ${index % 2 === 1 ? "pr" :'pl'}`}>
-                    <h4 className='mb-2 mb-md-3'>{item.title}</h4>
-                    <p>{item.des}</p>
+                    <h4 className='mb-2 mb-md-3' data-aos="fade-up" data-aos-duration="1600" data-aos-delay="" data-aos-offset="">{item.title}</h4>
+                    <p data-aos="fade-up" data-aos-duration="1800" data-aos-delay="" data-aos-offset="">{item.des}</p>
                   </div>
                 </Col>
               </Row>

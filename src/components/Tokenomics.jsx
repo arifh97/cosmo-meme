@@ -13,19 +13,19 @@ export default function Tokenomics() {
           </Col>
           <Col xs={12}>
             <div className="tokenomics-wrap d-flex flex-wrap justify-content-between">
-              <div className="tokenomics-item bg-color text-center">
+              <div className="tokenomics-item bg-color text-center" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="" data-aos-offset="">
                 <div className="icon mb-3"><img src={logo} alt="" /></div>
                 <h3 className='mb-0'>Cosmos</h3>
               </div>
-              <div className="tokenomics-item text-center">
+              <div className="tokenomics-item text-center" data-aos="fade-up" data-aos-duration="1600" data-aos-delay="" data-aos-offset="">
                 <p className="fw-bold text-white mb-12">Name: COSMO</p>
                 <p className="fw-bold text-white">Ticker : $COSMO</p>
               </div>
-              <div className="tokenomics-item text-center">
+              <div className="tokenomics-item text-center" data-aos="fade-up" data-aos-duration="1800" data-aos-delay="" data-aos-offset="">
                 <p className="fw-bold text-white mb-12">Tax : 0%</p>
                 <p className="fw-bold text-white">supply : 1 Trillion</p>
               </div>
-              <div className="tokenomics-item text-center">
+              <div className="tokenomics-item text-center" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="" data-aos-offset="">
                 <p className="fw-bold text-white mb-12">LP : Burned</p>
                 <p className="fw-bold text-white">CONTRACT: RENOUNCED</p>
               </div>

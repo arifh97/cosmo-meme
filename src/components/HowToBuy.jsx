@@ -42,7 +42,7 @@ export default function HowToBuy() {
         <Row>
           {buy.map((item, index) => (
             <Col xs={12} md={6} lg={4} key={index} className='d-flex mb-4 mb-lg-0'>
-              <div className="whyTo-card rounded-4 w-100">
+              <div className="whyTo-card rounded-4 w-100" data-aos="fade-up" data-aos-duration={`1${index+1}00`} data-aos-delay={`${index*50}`} data-aos-offset="">
                 <div className="whyTo-num bg-primary text-white ms-auto d-flex align-items-center justify-content-center">{index < 9 ? 0 :""}{index+1}</div>
                 <div className="whyTo-content pt-0">
                   <div className="whyTo-icon" dangerouslySetInnerHTML={{__html:item.icon}}></div>

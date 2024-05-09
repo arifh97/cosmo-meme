@@ -26,6 +26,12 @@
             --width: 36px;
             font-size: 14px;
             border-width: 1px;
+            & svg {
+                @include mmd {
+                    width: auto;
+                    height: auto;
+                }
+            }
         }
     }
     &-foot {

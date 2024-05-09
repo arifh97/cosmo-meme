@@ -60,7 +60,7 @@ export default function Team() {
     },
   ]
   return (
-    <div className='team common-padding'>
+    <div className='team common-padding position-relative z-2'>
       <Container>
         <Row>
           <Col xs={12}>
@@ -69,7 +69,7 @@ export default function Team() {
         </Row>
         <Row className='common-row'>
           {team.map((item, index) => (
-            <Col xs={12} md={6} lg={4} xl={3} className='d-flex mb-4 mb-xl-0' key={index}>
+            <Col xs={12} md={6} lg={4} xl={3} className='d-flex mb-4 mb-xl-0' key={index} data-aos="fade-up" data-aos-duration={`1${index+2}00`} data-aos-delay={`${index+1}00`} data-aos-offset="">
               <div className="team-item w-100">
                 <div className="team-img text-center">
                   <img src={item.img} alt="" />

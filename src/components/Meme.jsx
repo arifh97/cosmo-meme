@@ -38,7 +38,7 @@ export default function Meme() {
           <Col xs={12}>
             <div className="meme-wrap">
               {meme.map((item, index) => (
-                <div className="meme-item" key={index}>
+                <div className="meme-item" key={index} data-aos="fade-up" data-aos-duration={`1${index+3}00`} data-aos-delay="" data-aos-offset="">
                   <div className="meme-img"><img src={item.img} alt="" /></div>
                   <div className="meme-content text-white"><strong className='fw-bold'>$COSMO</strong> Meme Coin</div>
                 </div>
