@@ -1,0 +1,212 @@
+.roadmap{
+    &-area{
+        position: relative;
+        z-index: 1;
+        padding-top: 245px;
+        padding-bottom: 210px;
+        @include sm{
+            padding-top: 150px;
+        }
+        .section-title{
+            h2{ 
+                word-spacing: -18px;
+                @include sm{
+                    font-size: 40px;
+                }
+            }
+        }
+        .vertical-timeline-element--work{
+            p{
+                max-width: 316px;
+                margin-top: 0;
+                color: #C5C3C3;
+                line-height: 170%; /* 30.6px */
+                letter-spacing: 0.36px;
+                @include font-18;
+                @include sm{
+                    font-size: 14px;
+                }
+                @include ssm{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.vertical-timeline--two-columns .vertical-timeline-element-content{
+    max-width: 463px;
+    background-color: transparent;
+    background-image: url('../img/timelineItemBG.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    box-shadow: none;
+    padding-top: 80px;
+    padding-bottom: 140px;
+    padding-left: 80px;
+    padding-right: 70px;
+    position: relative;
+    text-align: left;
+    margin-top: -70px;
+    @include xl{
+        max-width: 390px;
+        padding-top: 60px;
+        padding-bottom: 100px;
+        padding-left: 60px;
+        padding-right: 60px;
+        margin-top: -30px;
+    }
+    @include lg{
+        max-width: 340px;
+        padding-top: 40px;
+        padding-bottom: 80px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top: -30px;
+    }
+    @include mmd{
+        max-width: 340px;
+        padding-top: 40px;
+        padding-bottom: 80px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top: -30px;
+    }
+}
+
+
+.vertical-timeline--two-columns .vertical-timeline-element-icon {
+ display: none;
+}
+.howtobuy-area .vertical-timeline-element--work:nth-child(even) .vertical-timeline-element-icon {
+   display: none;
+}
+
+.vertical-timeline--two-columns .vertical-timeline-element-content-arrow{
+    display: none;
+}
+
+.number{
+    width: 210px;
+    height: 70px;
+    background: #25393E;
+    position: absolute;
+    right: -220px;
+    top: 40%;
+    border-radius: 8px;
+    transform: translateY(-50%);
+    color: $white;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 36px; 
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    @include lg{
+        font-size: 20px;
+        width:160px;
+        padding-inline: 30px;
+        right: -235px;
+    }
+    @include mmd{
+        font-size: 20px;
+        width:160px;
+        padding-inline: 30px;
+        right: -235px;
+    }
+}
+.roadmap-area .vertical-timeline-element--work:nth-child(even) .number{
+        left: -220px;
+        right: auto;
+        @include lg{
+            left: -248px;
+        }
+}
+.vertical-timeline-element {
+    margin:0;
+}
+.vertical-timeline--two-columns  .vertical-timeline-element--work:nth-child(even) .vertical-timeline-element-content{
+    background-image: url('../img/timelineItemBGEven.png');
+}
+.vertical-timeline::before {
+    content: '';
+    position: absolute; 
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 300px;
+    transform: translateX(-50%);
+    background-image:url('../img/roadmapMiddleShap.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: transparent;
+}
+
+@media(max-width:480px){
+    .vertical-timeline-element-content{
+        max-width: 403px;
+    }
+}
+
+
+@media only screen and (max-width: 1169px){
+    .vertical-timeline.vertical-timeline--two-columns {
+        max-width: 767px;
+    }
+    .vertical-timeline-element-content{
+        margin-bottom: 150px;
+    }
+    .vertical-timeline {
+        margin-top: 60px !important;
+    }
+    
+    .number{
+        top: -50px;
+       left: 0;
+    }
+    .roadmap-area .vertical-timeline-element--work:nth-child(even) .number{
+        left: auto;
+        right: 0;
+    }
+    .roadmap-area .vertical-timeline-element--work:nth-child(even) .vertical-timeline-element-content{
+        text-align: right;
+    }
+    
+    .vertical-timeline::before {
+        display: none;
+     }
+     .roadmap-area .vertical-timeline-element--work{
+        width: 50%;
+        display: inline-block;
+        @include sm{
+            width: 100%;
+        }
+     }
+     .roadmap-area .vertical-timeline-element-content{
+        margin-left: 0;
+        @include sm{
+            margin-inline: auto;
+        }
+     }
+}
+
+@media(min-width:1170px){
+    .howtobuy-area .vertical-timeline-element--work:nth-child(2){
+        margin-top: -50px;
+    }
+    
+    .howtobuy-area .vertical-timeline-element--work:nth-child(4){
+        margin-top: -50px;
+    }
+    .vertical-timeline::before {
+        top: 30px;
+    }
+    
+}
+
+
