@@ -24,8 +24,8 @@
     }
     &.position-fixed {
         animation: headerAnimation .5s linear;
-        background-color: rgba($color: $bg, $alpha: .8);
-        backdrop-filter: blur(14px);
+        background-color: rgba($color: $bg, $alpha: .5);
+        backdrop-filter: blur(10px);
         --bs-navbar-padding-y: 24px;
         @include md {
             --bs-navbar-padding-y: 20px;
@@ -71,6 +71,8 @@
         @include mmd {
             font-size: 16px;
             color: $heading;
+            padding-left: 0;
+            padding-right: 0;
         }
         &:hover,
         &.active {
@@ -87,7 +89,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 8px;
+        margin-left: 14px;
+        @include sm {
+            margin-left: 8px;
+        }
         & svg {
             --width: 40px;
             width: var(--width);

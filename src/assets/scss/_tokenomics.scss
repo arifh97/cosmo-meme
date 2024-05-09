@@ -1,0 +1,71 @@
+.tokenomics {
+    &-wrap {
+        border-radius: 24px;
+        background: linear-gradient(180deg, #242425 0%, rgba(16, 16, 17, 0.30) 100%);
+        backdrop-filter: blur(16px);
+        padding: 32px;
+        @include sm {
+            padding: 20px;
+        }
+    }
+    &-item {
+        padding: 32px;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include lg {
+            display: block;
+        }
+        @include mmd {
+            display: block;
+        }
+        @include sm {
+            padding: 24px;
+        }
+        &:not(.bg-color):not(:nth-child(2)) {
+            &::before {
+                content: "";
+                width: 2px;
+                background-color: rgba($color: #C0C0C0, $alpha: .5);
+                height: calc(100% - 40px);
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                @include sm {
+                    display: none;
+                }
+            }
+        }
+        @include lg {
+            width: calc(100% / 2);
+            &:nth-child(3),
+            &:nth-child(4) {
+                margin-top: 30px;
+            }
+        }
+        @include md {
+            width: calc(100% / 2);
+            &:nth-child(3),
+            &:nth-child(4) {
+                margin-top: 30px;
+            }
+        }
+        @include sm {
+            width: 100%;
+        }
+        &.bg-color {
+            border-radius: 12px;
+            background: linear-gradient(180deg, #343738 0%, rgba(41, 44, 45, 0.50) 100%);
+        }
+        & h3 {
+            @include font-40;
+        }
+        & p {
+            @include font-22;
+        }
+    }
+}

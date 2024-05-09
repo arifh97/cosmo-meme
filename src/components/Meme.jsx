@@ -40,7 +40,7 @@ export default function Meme() {
               {meme.map((item, index) => (
                 <div className="meme-item" key={index}>
                   <div className="meme-img"><img src={item.img} alt="" /></div>
-                  <div className="meme-content"><strong className='fw-bold'>$COSMO</strong> Meme Coin</div>
+                  <div className="meme-content text-white"><strong className='fw-bold'>$COSMO</strong> Meme Coin</div>
                 </div>
               ))}
             </div>

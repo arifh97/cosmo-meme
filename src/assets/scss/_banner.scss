@@ -1,6 +1,13 @@
 .banner {
     padding-top: 210px;
     padding-bottom: 80px;
+    @include md {
+        padding-top: 180px;
+    }
+    @include sm {
+        padding-top: 160px;
+        padding-bottom: 40px;
+    }
     &-content {
         & h1 {
             @include font-150;
@@ -17,15 +24,20 @@
             margin-bottom: 55px;
             @include xl {
                 margin-bottom: 44px;
+                font-size: 31px;
             }
             @include lg {
                 margin-bottom: 40px;
             }
             @include md {
                 margin-bottom: 30px;
+                padding: 0;
+                font-size: 24px;
             }
             @include sm {
                 margin-bottom: 26px;
+                font-size: 22px;
+                padding: 0;
             }
         }
     }

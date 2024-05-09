@@ -85,7 +85,7 @@ export default function Team() {
                     ))}
                     <div className="team-foot d-flex align-items-center flex-wrap gap-1">
                       <span>US</span>
-                      <a href={item.profile_url} target='_blank' className="link"><FaArrowRight /></a>
+                      <a href={item.profile_url} target='_blank' className="link ms-2 d-flex align-items-center justify-content-center"><FaArrowRight /></a>
                     </div>
                   </div>
                 </div>

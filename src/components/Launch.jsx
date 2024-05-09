@@ -27,7 +27,7 @@ export default function Launch({ className }) {
 
   return (
     <div className={`launch text-center ${className}`}>
-      <h3 className='fw-semibold mb-3 mb-md-4 text-white fw-semibold'>Launch In</h3>
+      <h3 className='fw-semibold mb-3 mb-lg-4 text-white fw-semibold'>Launch In</h3>
       <div className="launch-wrap d-grid align-items-center gap-3 gap-md-4">
         {Object.entries(timeLeft).map(([unit,value], index) => (
           <div className="launch-item" key={index}>

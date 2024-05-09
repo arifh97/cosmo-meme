@@ -24,11 +24,13 @@ export default function Story() {
     },
   ]
   return (
-    <div className='story common-padding'>
+    <div className='story common-padding position-relative z-0'>
+      <div className="common-shape position-absolute top-0 end-0 z-n1"></div>
+      <div className="common-shape position-absolute two start-0 z-n1"></div>
       <Container>
         <Row className='justify-content-center'>
           <Col xs={12} md={8} lg={6} xl={4}>
-            <Launch />
+            <Launch className="text-center" />
           </Col>
         </Row>
         <Row className='justify-content-center common-padding'>
@@ -37,15 +39,15 @@ export default function Story() {
           </Col>
           <Col xs={12}>
             {story.map((item, index) => (
-              <Row key={index} className={`align-items-center ${index % 2 === 1 ? "flex-row-reverse" : ''}`}>
+              <Row key={index} className={`align-items-center mt-4 pt-md-2 ${index % 2 === 1 ? "flex-row-reverse" : ''}`}>
                 <Col xs={12} md={5} lg={4}>
-                  <div className="story-img">
+                  <div className="story-img mb-4 mb-md-0">
                     <img src={item.img} alt="" />
                   </div>
                 </Col>
                 <Col xs={12} md={7} lg={8}>
                   <div className={`story-content ${index % 2 === 1 ? "pr" :'pl'}`}>
-                    <h4 className='mb-3'>{item.title}</h4>
+                    <h4 className='mb-2 mb-md-3'>{item.title}</h4>
                     <p>{item.des}</p>
                   </div>
                 </Col>
@@ -55,7 +57,7 @@ export default function Story() {
         </Row>
         <Row className='justify-content-center'>
           <Col xs={12} md={8} lg={6} xl={4}>
-            <Launch />
+            <Launch className="text-center" />
           </Col>
         </Row>
       </Container>

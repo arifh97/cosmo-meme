@@ -1,0 +1,46 @@
+.story {
+    & .common-shape.two {
+        bottom: 20%;
+    }
+    &-img {
+        overflow: hidden;
+        border-radius: 20px;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &-content {
+        --pd: 72px;
+        @include xl {
+            --pd: 50px;
+        }
+        @include lg {
+            --pd: 44px;
+        }
+        @include mmd {
+            --pd: 0;
+        }
+        &.pr {
+            padding-right: var(--pd);
+        }
+        &.pl {
+            padding-left: var(--pd);
+        }
+        & h4 {
+            @include font-36;
+            font-weight: 900;
+            color: #BDBDBD;
+        }
+        & p {
+            @include font-24;
+            line-height: 160%;
+        }
+    }
+}
+
+::selection {
+    background-color: $white;
+    color: $black;
+}

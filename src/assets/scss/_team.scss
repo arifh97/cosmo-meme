@@ -1,0 +1,52 @@
+.team {
+    &-item {
+        background-color: #161617;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        @include transition;
+        &:hover {
+            background-color: transparent;
+        }
+    }
+    &-img {
+        padding: 40px;
+    }
+    &-content {
+        background-color: #1E1E1F;
+        & h4 {
+            font-weight: 900;
+            color: #E6E6E6;
+        }
+        & span:not(.team-foot) {
+            @include font-18;
+            font-weight: 500;
+        }
+        & .social-link {
+            --width: 36px;
+            font-size: 14px;
+            border-width: 1px;
+        }
+    }
+    &-foot {
+        & span {
+            color: #989898;
+            padding: 6px 20px;
+            font-size: 18px;
+            line-height: 160%;
+            font-weight: 500;
+            border-bottom: 2px solid;
+        }
+        & .link {
+            --width: 36px;
+            width: var(--width);
+            height: var(--width);
+            border-radius: 100%;
+            border: 1.5px solid $primary;
+            &:hover {
+                color: $white;
+                background-color: $primary;
+            }
+        }
+    }
+}

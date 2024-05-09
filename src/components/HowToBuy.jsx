@@ -41,12 +41,12 @@ export default function HowToBuy() {
         </Row>
         <Row>
           {buy.map((item, index) => (
-            <Col xs={12} md={6} lg={4} key={index}>
-              <div className="whyTo-card rounded-4">
-                <div className="whyTo-num bg-primary text-white ms-auto d-flex align-items-center justify-content-center">{index < 9 ? 0 :""} {index+1}</div>
-                <div className="whyTo-content">
+            <Col xs={12} md={6} lg={4} key={index} className='d-flex mb-4 mb-lg-0'>
+              <div className="whyTo-card rounded-4 w-100">
+                <div className="whyTo-num bg-primary text-white ms-auto d-flex align-items-center justify-content-center">{index < 9 ? 0 :""}{index+1}</div>
+                <div className="whyTo-content pt-0">
                   <div className="whyTo-icon" dangerouslySetInnerHTML={{__html:item.icon}}></div>
-                  <h4 className='mb-3 mb-md-4'>{item.title}</h4>
+                  <h4 className='mb-3 mb-lg-4'>{item.title}</h4>
                   <p>{item.des}</p>
                 </div>
               </div>

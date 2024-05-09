@@ -6,14 +6,14 @@ import img from '../assets/img/banner.png'
 export default function Banner() {
   return (
     <div className="banner position-relative z-1 overflow-hidden">
-      <div className="banner-img position-absolute top-0 start-0 z-n1 w-100">
+      <div className="banner-img position-absolute top-0 start-0 z-n1 w-100 h-100">
         <img src={img} alt="" className='w-100 h-100 object-fit-cover' />
       </div>
       <Container>
         <Row className='justify-content-center'>
-          <Col xs={12} md={8} lg={7}>
+          <Col xs={12} md={8} xxl={7}>
             <div className="banner-content text-center">
-              <h1 className='mb-4'>$COSMO</h1>
+              <h1 className='mb-3 mb-md-4'>$COSMO</h1>
               <p>Together with tomcatwifhat on Crypto Earning</p>
             </div>
           </Col>
@@ -26,7 +26,7 @@ export default function Banner() {
           </Col>
         </Row>
         <Row className='justify-content-center'>
-          <Col xs={12} md={6} xl={4}>
+          <Col xs={12} md={8} xl={4}>
             <Launch className="text-center" />
           </Col>
         </Row>

@@ -1,0 +1,48 @@
+.whyTo {
+    &-card {
+        background-color: #171717;
+        overflow: hidden;
+    }
+    &-num {
+        --width: 86px;
+        width: var(--width);
+        height: var(--width);
+        @include font-24;
+        font-family: $font-2;
+        border-bottom-left-radius: 16px;
+        @include lg {
+            --width: 66px;
+        }
+        @include sm {
+            --width: 60px;
+        }
+    }
+    &-content {
+        padding: 50px 34px;
+        @include lg {
+            padding: 40px 24px;
+        }
+        @include mmd {
+            padding: 20px;
+        }
+        & h4 {
+            @include font-30;
+            line-height: 110%;
+        }
+        & p {
+            color: #D3D3D3;
+        }
+    }
+    &-icon {
+        margin-bottom: 30px;
+        @include lg {
+            margin-bottom: 24px;
+        }
+        @include md {
+            margin-bottom: 20px;
+        }
+        @include sm {
+            margin-bottom: 22px;
+        }
+    }
+}
