@@ -4,6 +4,7 @@ import Launch from './Launch';
 import img from '../assets/img/banner.png'
 import { useEffect } from 'react';
 import Aos from 'aos';
+import video from '../assets/img/site-video.mp4'
 
 export default function Banner() {
   useEffect(() => {
@@ -28,7 +29,7 @@ export default function Banner() {
         <Row className='justify-content-center'>
           <Col xs={12} lg={10} data-aos="fade-up" data-aos-duration="1400" data-aos-delay="" data-aos-offset="">
             <div className="banner-video position-relative z-1 overflow-hidden rounded-4 border border-4 border-primary">
-              <video className='position-absolute top-0 start-0 object-fit-cover' src="https://www.w3schools.com/tags/movie.mp4" controls poster={poster}></video>
+              <video className='position-absolute top-0 start-0 object-fit-cover' src={video} controls poster={poster}></video>
             </div>
           </Col>
         </Row>
